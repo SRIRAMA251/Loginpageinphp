@@ -2,6 +2,7 @@
 include ("config.php");
 include("registration.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,20 +52,20 @@ include("registration.php");
                         <td class="input">Username</td>
                     </tr>
                     <tr>
-                        <td><input type="text" placeholder="Enter your username" class="inputtag" name="username"> </td>
+                        <td><input type="text" placeholder="Enter your username" class="inputtag" name="username" required> </td>
                     </tr>
 
                     <tr>
                         <td class="input">Email</td>
                     </tr>
                     <tr>
-                        <td><input type="email" placeholder="you@email.com" class="inputtag" name="email"> </td>
+                        <td><input type="email" placeholder="you@email.com" class="inputtag" name="email" required> </td>
                     </tr>
                     <tr>
                         <td class="input">Mobile No</td>
                     </tr>
                     <tr>
-                        <td><input type="Text" placeholder="Enter your Mobile No" class="inputtag" name="mobile"> </td>
+                        <td><input type="Text" placeholder="Enter your Mobile No" class="inputtag" name="mobile" required> </td>
                     </tr>
                    
                     <tr>
@@ -72,7 +73,7 @@ include("registration.php");
                   
                     </tr>
                     <tr>
-                        <td><input type="password" placeholder="Type your password" class="inputtag" name="password1" id="p1"> </td>
+                        <td><input type="password" placeholder="Type your password" class="inputtag" name="password1" id="p1" required> </td>
                         <td><p class="error" id="pass_err"></p>
                         <p class="correct" id="pass_crr"></p>
                     </td>
@@ -81,16 +82,16 @@ include("registration.php");
                         <td class="input">Confrim Password</td>
                     </tr>
                     <tr>
-                        <td><input type="password" placeholder="Confrim password" class="inputtag" name="password2" id="p2"> </td>
+                        <td><input type="password" placeholder="Confrim password" class="inputtag" name="password2" id="p2" required> </td>
                     </tr>
               
                     
                  
                     <tr>
-                        <td><input type="submit" name="submit" value="Create An Account" class="accbutton accletter"></td>
+                        <td><input type="submit" name="submit" value="Create An Account" class="accbutton accletter" required></td>
                     </tr>
                 
-                    <tr><td class="simplelast">Already a Member?<a href="index.html"><span>Sign In.</a></span></td></tr>
+                    <tr><td class="simplelast">Already a Member?<a href="singnmain.php"><span>Sign In.</a></span></td></tr>
                 </table>
 
             </form>

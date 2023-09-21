@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+    header("location:singnmain.php?message=Please login hear to access");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +14,7 @@
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signin</title>
+    <title>Home</title>
 </head>
 
 <body>
@@ -23,33 +29,14 @@
                     <tr>
                         <td class=".sub-head">Track Your health with SportsCo.</td>
                     </tr>
+                    
                     <tr>
                         <td><br></td>
                     </tr>
-                    <tr>
-                        <td class="input">Email</td>
-                    </tr>
-                    <tr>
-                        <td><input type="email" name="email" placeholder="Enter your email" class="inputtag"> </td>
-                    </tr>
+                  <p>Hi <?php echo $_SESSION["email"]; ?></p>
                     <tr><td><br></td></tr>
-                    <tr>
-                        <td class="input">Password
-                            
-                        </td>
-                        
-                    </tr>
-
-                    
-                    <tr>
-                        <!-- <td class="password-container">
-
-                            <input type="password"  placeholder="By.YOu02" class="inputtag" name="password" id="password"><i class="fa-solid fa-eye" id="show-password"></i> </td> -->
-                            <td><input type="password" name="password" placeholder="Enter your Password" class="inputtag"> </td>
-                    </tr>
                    
-                   
-                    <tr>
+                  
                         <td><br></td>
                     </tr>
                     <tr><td><br></td></tr>
@@ -67,7 +54,7 @@
                     <tr>
                         <td><br></td>
                     </tr>
-                    <tr><td class="simplelast">New to SportsCo? <a href="signup.html"><span>Sign Up.</span></a></td></tr>
+                    <tr><td class="simplelast">New to SportsCo? <a href="singup.php"><span>Sign Up.</span></a></td></tr>
                 </table>
             </form>
         </div>
