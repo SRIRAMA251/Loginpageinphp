@@ -1,5 +1,5 @@
 <?php
-session_start7();
+session_start();
 session_destroy();
-header("location:singnmain.php?message=you are logout.");
+header("location:singnmain.php?message=You are logged out!");
 ?>

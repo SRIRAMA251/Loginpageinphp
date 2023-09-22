@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 include("config.php");
 if(isset($_POST["submit"])){
     $email=$_POST["email"];
@@ -13,9 +14,10 @@ if(isset($_POST["submit"])){
         if($result->num_rows==1){
             $_SESSION["email"]=$email;
             header("location:home.php");
+            exit;
         }else{
             header("location:index.php?message=Invalid user or password");
-           
+           exit;
         }
     }
     else{

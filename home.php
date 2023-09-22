@@ -21,11 +21,12 @@ if(!isset($_SESSION['email'])){
     <div class="container">
         <div class="left-column"></div>
         <div class="right-column">
-            <form class="form" action="loginvalidation.php"  method="POST">
+            <form class="form" action="logout.php"  method="POST">
                 <table>
                     <tr>
                         <td class="header">Welcome Back!</td>
                     </tr>
+                    <tr><td>    <h2><?php echo $_SESSION["email"]; ?></h2></td></tr>
                     <tr>
                         <td class=".sub-head">Track Your health with SportsCo.</td>
                     </tr>
@@ -33,15 +34,23 @@ if(!isset($_SESSION['email'])){
                     <tr>
                         <td><br></td>
                     </tr>
-                  <p>Hi <?php echo $_SESSION["email"]; ?></p>
+           <tr><td><ul>
+            <li>Track your daily workouts and fitness progress</li>
+            <li>Set and achieve your fitness goals</li>
+            <li>Connect with other fitness enthusiasts in our community</li>
+            <li>Access personalized nutrition plans</li>
+            <li>Stay motivated and inspired on your fitness journey</li>
+        </ul></td></tr>
                     <tr><td><br></td></tr>
+                   <tr><td>No matter your fitness level or goals, SportsCo is here to support you every step of the way. Get ready to take charge of your health and reach new heights!</td></tr>
                    
-                  
+                  <tr>
                         <td><br></td>
                     </tr>
+                    <tr><td>If you have any questions or need assistance, feel free to reach out to our customer support team. We're here to help you succeed!</td></tr>
                     <tr><td><br></td></tr>
                     <tr>
-             <td><input type="submit" value="Sign In" class="accbutton accletter" name="submit"></td>
+             <td><input type="submit" value="Logout" class="accbutton accletter" name="submit"></td>
                     </tr>
                     <tr>
                         <td><br></td>
@@ -54,7 +63,7 @@ if(!isset($_SESSION['email'])){
                     <tr>
                         <td><br></td>
                     </tr>
-                    <tr><td class="simplelast">New to SportsCo? <a href="singup.php"><span>Sign Up.</span></a></td></tr>
+                   
                 </table>
             </form>
         </div>
